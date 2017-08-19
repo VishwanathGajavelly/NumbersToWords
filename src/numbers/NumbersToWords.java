@@ -2,8 +2,8 @@ package numbers;
 
 public class NumbersToWords {
 	
-	String units[] = { "zero", "one", "two", "three", "four", "five","six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-	String tens[] = { "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+	String units[] = { "Zero", "One", "Two", "Three", "Four", "Five","Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
+	String tens[] = { "Zero", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
 	
 	public String inWords(int number)
 	{
@@ -22,14 +22,14 @@ public class NumbersToWords {
 	
 		if ((number / 1000) > 0)
 		{
-			result += inWords(number / 1000) + " thousand ";
+			result += inWords(number / 1000) + " Thousand ";
 			number %= 1000;
 			if(number < 100 && number > 0) result += "and ";
 		}
 	
 		if ((number / 100) > 0)
 		{
-			result += inWords(number / 100) + " hundred";
+			result += inWords(number / 100) + " Hundred";
 			number %= 100;
 			if(number > 0) result += " and ";
 		}
@@ -43,11 +43,17 @@ public class NumbersToWords {
 			{
 				result += tens[number / 10];
 				if ((number % 10) > 0)
-					result += "-" + units[number % 10];
+					result += " " + units[number % 10];
 			}
 		}
 	
 		return result;
+	}
+	
+	public static void main(String[] args) {
+
+		System.out.println(new NumbersToWords().inWords(Integer.parseInt(args[0])));
+		
 	}
 }
 
