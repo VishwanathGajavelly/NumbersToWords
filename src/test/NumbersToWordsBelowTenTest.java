@@ -27,17 +27,17 @@ public class NumbersToWordsBelowTenTest {
 	@Parameters
 	public static Collection<Object[]> testParams_numberToWordsUsingCollection(){
 		return Arrays.asList(new Object[][] {
-			{0, "zero"},
-			{1, "one"},
-		    {2,"two"},
-		    {3, "three"},
-		    {4,"four"},
-		    {5,"five"},
-		    {6,"six"},
-		    {7,"seven"},
-		    {8,"eight"},
-		    {9,"nine"},
-		    {10,"ten"},
+			{0, "Zero"},
+			{1, "One"},
+		    {2,"Two"},
+		    {3, "Three"},
+		    {4,"Four"},
+		    {5,"Five"},
+		    {6,"Six"},
+		    {7,"Seven"},
+		    {8,"Eight"},
+		    {9,"Nine"},
+		    {10,"Ten"},
 		    {100,"Please Enter a number Less than or Equal to 10"},
 		    {11,"Please Enter a number Less than or Equal to 10"},
 		      
