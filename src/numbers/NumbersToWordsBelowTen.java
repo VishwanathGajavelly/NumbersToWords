@@ -12,7 +12,6 @@ public class NumbersToWordsBelowTen {
 	
 	public static void main(String[] args) {
 		
-		
 		System.out.println(new NumbersToWordsBelowTen().inWords(Integer.parseInt(args[0])));
 		
 	}

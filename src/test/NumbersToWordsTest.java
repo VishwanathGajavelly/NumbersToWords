@@ -29,7 +29,7 @@ public class NumbersToWordsTest {
 	public static Collection<Object[]> testParams_numberToWords(){
 		return Arrays.asList(new Object[][] {
 			{-45, "Please Enter a Positive Number"},
-			{0, "zero"},
+			{0, "Zero"},
 			{2, "Two"},
 			{11,"Eleven"},
 			{17, "Seventeen"},

@@ -8,7 +8,7 @@ public class NumbersToWords {
 	public String inWords(int number)
 	{
 		if (number == 0)
-			return "zero"; // directly parse "zero", just to make our if-block on line 39 working.
+			return "Zero"; // directly parse "zero", just to make our if-block on line 39 working.
 	
 		if (number < 0)
 			//  return "minus " + inWords(java.lang.Math.abs(number)); [-1 will be returned as minus one]

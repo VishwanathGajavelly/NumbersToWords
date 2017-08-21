@@ -45,7 +45,7 @@ public class NumbersToWordsBelowTenTest {
 	}
 	
 	@Test 
-	public void testNumberUpto10(){
+	public void testForNumbersBelow10(){
 		assertEquals(expected,new NumbersToWordsBelowTen().inWords(actual));
 	}
 
