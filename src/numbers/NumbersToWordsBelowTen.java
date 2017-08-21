@@ -11,12 +11,18 @@ public class NumbersToWordsBelowTen {
 	}
 	
 	public static void main(String[] args) {
-		
-		System.out.println(new NumbersToWordsBelowTen().inWords(Integer.parseInt(args[0])));
+				
+		try{
+		System.out.println(new NumbersToWords().inWords(Integer.parseInt(args[0])));
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Exception arised: "+e);
+			System.out.println("Please send atleast one input argument.");
+		}
+		catch(NumberFormatException e) {
+			System.out.println("Exception arised: "+e);
+			System.out.println("Please send only Integer Values.");
+		}
 		
 	}
 }
-
-
-
-

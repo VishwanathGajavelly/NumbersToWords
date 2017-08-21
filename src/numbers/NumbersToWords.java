@@ -8,7 +8,7 @@ public class NumbersToWords {
 	public String inWords(int number)
 	{
 		if (number == 0)
-			return "Zero"; // directly parse "zero", just to make our if-block on line 39 working.
+			return "Zero"; // directly parse "zero", just to make our if-block on line 37 working.
 	
 		if (number < 0)
 			//  return "minus " + inWords(java.lang.Math.abs(number)); [-1 will be returned as minus one]
@@ -51,12 +51,20 @@ public class NumbersToWords {
 	}
 	
 	public static void main(String[] args) {
+		
+		try{
 
 		System.out.println(new NumbersToWords().inWords(Integer.parseInt(args[0])));
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Exception arised: "+e);
+			System.out.println("Please send atleast one input argument.");
+		}
+		catch(NumberFormatException e) {
+			System.out.println("Exception arised: "+e);
+			System.out.println("Please send only Integer Values.");
+		}
+		
 		
 	}
 }
-
-
-
-
